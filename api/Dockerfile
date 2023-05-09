@@ -1,5 +1,7 @@
 # Base Image
-FROM python:3.7.2-slim
+FROM python:3.7.16-bullseye
+
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 
 # Install netcat
 RUN apt-get update && \
